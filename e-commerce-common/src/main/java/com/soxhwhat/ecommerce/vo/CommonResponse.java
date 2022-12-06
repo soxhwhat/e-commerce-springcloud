@@ -1,36 +1,35 @@
 package com.soxhwhat.ecommerce.vo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
- * <p>通用响应对象定义</p>
- * <p>{
- *     "code": "200",
- *     "data": {},
- *     "message": ""
- * }</p>
- *
- * @author Soxhwhat
- * @date 2022/12/6 11:08
- * @update [序号][日期YYYY-MM-DD] [更改人姓名][变更描述]
- */
+ * <h1>通用响应对象定义</h1>
+ * {
+ *     "code": 0,
+ *     "message": "",
+ *     "data": {}
+ * }
+ * */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class CommonResponse<T> implements Serializable {
-    /**
-     * 错误码
-     */
+
+    /** 错误码 */
     private Integer code;
 
-    /**
-     * 错误消息
-     */
+    /** 错误消息 */
     private String message;
 
-    /**
-     * 泛型响应数据
-     */
-    private T data;
+    /** 泛型响应数据 */
+    private T Data;
 
     public CommonResponse(Integer code, String message) {
+
         this.code = code;
         this.message = message;
     }

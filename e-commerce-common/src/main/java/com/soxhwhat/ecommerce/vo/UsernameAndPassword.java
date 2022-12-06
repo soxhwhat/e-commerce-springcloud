@@ -5,16 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * <h1>登录用户信息</h1>
+ * <h1>用户名和密码</h1>
  * */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginUserInfo {
-
-    /** 用户 id */
-    private Long id;
+public class UsernameAndPassword {
 
     /** 用户名 */
     private String username;
+
+    /** 密码 */
+    private String password;
 }

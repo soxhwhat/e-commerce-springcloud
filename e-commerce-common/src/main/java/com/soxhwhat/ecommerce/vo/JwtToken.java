@@ -5,16 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * <h1>登录用户信息</h1>
+ * <h1>授权中心鉴权之后给客户端的 Token</h1>
  * */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginUserInfo {
+public class JwtToken {
 
-    /** 用户 id */
-    private Long id;
-
-    /** 用户名 */
-    private String username;
+    /** JWT */
+    private String token;
 }
